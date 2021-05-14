@@ -3,16 +3,8 @@ import SwiftUI
 struct VaccineView: View {
   /* Not sure how I fell about these @States */
   @State private var _title = ""
-  @State private var vacineData = VaccineViewModel.VaccineData(
-    vaccineText: "",
-    vaccineProportion: 0.0,
-    vaccineBarColor: .clear
-  )
-  @State private var vaccine2ndData = VaccineViewModel.VaccineData(
-    vaccineText: "",
-    vaccineProportion: 0.0,
-    vaccineBarColor: .clear
-  )
+  @State private var vacineData = VaccineViewModel.VaccineData()
+  @State private var vaccine2ndData = VaccineViewModel.VaccineData()
 
   let output: VaccineViewModel.Output
 
@@ -68,11 +60,24 @@ struct VaccineView_Previews: PreviewProvider {
     vaccinated2nd: "2864824" //25%
   )
 
-  static let viewModel = VaccineViewModel(state: rs)
+  static let sc = State_(
+    stateInformation: .SC,
+    vaccinated: "6592127", //90%
+    vaccinated2nd: "5493439" //75%
+  )
+
+  static let rsViewModel = VaccineViewModel(state: rs)
+  static let scViewModel = VaccineViewModel(state: sc)
 
   static var previews: some View {
     Group {
-      VaccineView(viewModel: viewModel)
+      VaccineView(viewModel: rsViewModel)
+        .preferredColorScheme(.dark)
+        .previewLayout(.sizeThatFits)
+        .frame(height: 150.0)
+        .padding(10.0)
+      VaccineView(viewModel: scViewModel)
+        .preferredColorScheme(.dark)
         .previewLayout(.sizeThatFits)
         .frame(height: 150.0)
         .padding(10.0)

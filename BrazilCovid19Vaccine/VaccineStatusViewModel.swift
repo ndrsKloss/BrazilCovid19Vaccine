@@ -1,6 +1,8 @@
 import Combine
 import SwiftUI
 
+import CoreLocation
+
 final class VaccineStatusViewModel: ObservableObject, ViewModelType {
   typealias Input = Void
 
@@ -9,11 +11,14 @@ final class VaccineStatusViewModel: ObservableObject, ViewModelType {
   }
 
   private let repository: VaccineRequestable
-  
+  private var disposables = Set<AnyCancellable>()
+
   init(
-    vaccineRepository: VaccineRequestable = VaccineStatusRepository()
+    vaccineRepository: VaccineRequestable = VaccineStatusRepository(),
+    locationManager: LocationManager = LocationManager()
   ) {
     repository = vaccineRepository
+    locationManager.requestWhenInUseAuthorization()
   }
   
   func transform(
@@ -22,7 +27,6 @@ final class VaccineStatusViewModel: ObservableObject, ViewModelType {
     let dataSource = repository.requestInformation()
       .tryMap(parseVaccineSatus)
       .replaceError(with: [])
-      .eraseToAnyPublisher()
       .map { $0.map(VaccineViewModel.init) }
       .receive(on: DispatchQueue.main)
       .eraseToAnyPublisher()

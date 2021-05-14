@@ -1,7 +1,7 @@
 import SwiftUI
 import Combine
 
-final class VaccineViewModel: ObservableObject, ViewModelType {
+class VaccineViewModel: ObservableObject, ViewModelType {
   typealias Input = Void
 
   struct Output {
@@ -81,5 +81,15 @@ extension VaccineViewModel {
     let vaccineText: String
     let vaccineProportion: Double
     let vaccineBarColor: Color
+
+    init(
+      vaccineText: String = "",
+      vaccineProportion: Double = 0.0,
+      vaccineBarColor: Color = .clear
+    ) {
+      self.vaccineText = vaccineText
+      self.vaccineProportion = vaccineProportion
+      self.vaccineBarColor = vaccineBarColor
+    }
   }
 }

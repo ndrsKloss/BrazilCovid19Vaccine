@@ -38,9 +38,9 @@ struct State_ /* Prevent conflict with @State property wrapper */ {
   }
 
   init(
-    stateInformation: StateInformation,
-    vaccinated: String,
-    vaccinated2nd: String
+    stateInformation: StateInformation = .PLACEHOLDER,
+    vaccinated: String = "0",
+    vaccinated2nd: String = "0"
   ) {
     self.stateInformation = stateInformation
     _vaccinated = vaccinated
@@ -52,6 +52,7 @@ struct State_ /* Prevent conflict with @State property wrapper */ {
 
 enum StateInformation: String {
   case AC, AL, AP, AM, BA, CE, DF, ES, GO, MA, MT, MS, MG, PA, PB, PR, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO, TOTAL
+  case PLACEHOLDER = ""
   
   var population: Int {
     switch self {
@@ -83,6 +84,7 @@ enum StateInformation: String {
     case .SE: return 2335716
     case .TO: return 1604867
     case .TOTAL: return 213060458
+    case .PLACEHOLDER: return 1
     }
   }
 }
