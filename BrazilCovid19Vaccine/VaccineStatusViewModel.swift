@@ -11,6 +11,7 @@ final class VaccineStatusViewModel: ObservableObject, ViewModelType {
   }
 
   private let repository: VaccineRequestable
+  private let locationManager: LocationManager
   private var disposables = Set<AnyCancellable>()
 
   init(
@@ -18,6 +19,11 @@ final class VaccineStatusViewModel: ObservableObject, ViewModelType {
     locationManager: LocationManager = LocationManager()
   ) {
     repository = vaccineRepository
+    self.locationManager = locationManager
+
+  }
+
+  func requestAuthorization() {
     locationManager.requestWhenInUseAuthorization()
   }
   

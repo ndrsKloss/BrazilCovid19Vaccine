@@ -16,6 +16,7 @@ struct VaccineStatusView: View {
   ) {
     self.viewModel = viewModel
     output = viewModel.transform()
+    viewModel.requestAuthorization()
   }
 
   var body: some View {

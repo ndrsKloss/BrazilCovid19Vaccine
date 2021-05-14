@@ -49,8 +49,7 @@ class Provider: TimelineProvider {
       .filter { $0 != nil }
       .map { $0! }
       .receive(on: DispatchQueue.main)
-      .sink(receiveCompletion: { _ in },
-            receiveValue: { completion($0) })
+      .sink(receiveValue: { completion($0) })
       .store(in: &disposables)
   }
 

@@ -22,7 +22,7 @@ final class LocationManager: NSObject {
 
 extension LocationManager {
   func getState() -> Future<String, Error> {
-    return Future() { [locationManager] promise in
+    Future() { [locationManager] promise in
       guard let location = locationManager.location else {
         promise(.failure(LocationManagerError.noLocationFound))
         return
