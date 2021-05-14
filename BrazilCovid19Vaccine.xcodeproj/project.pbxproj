@@ -21,7 +21,10 @@
 		04C93037264DCB630060F4B7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C93031264D90DF0060F4B7 /* LocationManager.swift */; };
 		04C93040264EE7280060F4B7 /* VaccineStatusRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F913772645BAD900CFD86A /* VaccineStatusRepository.swift */; };
 		04C93045264EE9F00060F4B7 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04919408264816DF00307C7F /* Parse.swift */; };
-		04C9304A264EF83C0060F4B7 /* VaccineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9136426458F5B00CFD86A /* VaccineView.swift */; };
+		04C93054264EFBB30060F4B7 /* VaccineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C93053264EFBB30060F4B7 /* VaccineWidgetView.swift */; };
+		04C93055264EFBB30060F4B7 /* VaccineWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C93053264EFBB30060F4B7 /* VaccineWidgetView.swift */; };
+		04C9305B264EFD7E0060F4B7 /* VaccineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9305A264EFD7E0060F4B7 /* VaccineEntry.swift */; };
+		04C9305C264EFD7E0060F4B7 /* VaccineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9305A264EFD7E0060F4B7 /* VaccineEntry.swift */; };
 		04F91334264586C400CFD86A /* BrazilCovid19VaccineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F91333264586C400CFD86A /* BrazilCovid19VaccineApp.swift */; };
 		04F91336264586C400CFD86A /* VaccineStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F91335264586C400CFD86A /* VaccineStatusView.swift */; };
 		04F91338264586C600CFD86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F91337264586C600CFD86A /* Assets.xcassets */; };
@@ -83,6 +86,8 @@
 		04C93009264ABC3B0060F4B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C9300B264ABC3B0060F4B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C93031264D90DF0060F4B7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		04C93053264EFBB30060F4B7 /* VaccineWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineWidgetView.swift; sourceTree = "<group>"; };
+		04C9305A264EFD7E0060F4B7 /* VaccineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineEntry.swift; sourceTree = "<group>"; };
 		04F91330264586C400CFD86A /* BrazilCovid19Vaccine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrazilCovid19Vaccine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F91333264586C400CFD86A /* BrazilCovid19VaccineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrazilCovid19VaccineApp.swift; sourceTree = "<group>"; };
 		04F91335264586C400CFD86A /* VaccineStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineStatusView.swift; sourceTree = "<group>"; };
@@ -159,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				04C93007264ABC390060F4B7 /* BrazilCovid19VaccineWidget.swift */,
+				04C93053264EFBB30060F4B7 /* VaccineWidgetView.swift */,
+				04C9305A264EFD7E0060F4B7 /* VaccineEntry.swift */,
 				04C93009264ABC3B0060F4B7 /* Assets.xcassets */,
 				04C9300B264ABC3B0060F4B7 /* Info.plist */,
 			);
@@ -400,13 +407,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C9305C264EFD7E0060F4B7 /* VaccineEntry.swift in Sources */,
+				04C93055264EFBB30060F4B7 /* VaccineWidgetView.swift in Sources */,
 				04C93027264C409C0060F4B7 /* ViewModelType.swift in Sources */,
 				04C93045264EE9F00060F4B7 /* Parse.swift in Sources */,
 				04C93022264C3F160060F4B7 /* VaccineViewModel.swift in Sources */,
 				04C93037264DCB630060F4B7 /* LocationManager.swift in Sources */,
 				04C93008264ABC390060F4B7 /* BrazilCovid19VaccineWidget.swift in Sources */,
 				04C9302C264C40AB0060F4B7 /* State.swift in Sources */,
-				04C9304A264EF83C0060F4B7 /* VaccineView.swift in Sources */,
 				04C93040264EE7280060F4B7 /* VaccineStatusRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C9305B264EFD7E0060F4B7 /* VaccineEntry.swift in Sources */,
 				0491941D26488ABC00307C7F /* VaccineViewModel.swift in Sources */,
+				04C93054264EFBB30060F4B7 /* VaccineWidgetView.swift in Sources */,
 				04F91336264586C400CFD86A /* VaccineStatusView.swift in Sources */,
 				04919409264816DF00307C7F /* Parse.swift in Sources */,
 				04C93032264D90DF0060F4B7 /* LocationManager.swift in Sources */,

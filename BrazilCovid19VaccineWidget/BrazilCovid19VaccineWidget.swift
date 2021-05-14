@@ -66,22 +66,11 @@ struct BrazilCovid19VaccineWidget: Widget {
 
   var body: some WidgetConfiguration {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
-      VaccineView(viewModel: entry)
-        .padding(24)
+      VaccineWidgetView(viewModel: entry)
+        .padding(18.0)
     }
+    .supportedFamilies([.systemMedium, .systemSmall])
     .configurationDisplayName("Vacinas")
     .description("Acompanhe a progressão da campanha de vacinação.")
-  }
-}
-
-final class VaccineEntry: VaccineViewModel, TimelineEntry {
-  var date: Date
-
-  init(
-    state: State_ = State_(),
-    date: Date = Date()
-  ) {
-    self.date = date
-    super.init(state: state)
   }
 }
