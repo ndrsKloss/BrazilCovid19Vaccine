@@ -15,7 +15,7 @@ Publishers.ReceiveOn<Publishers.Map<Publishers.ReplaceError<Publishers.TryMap<An
 
 ### The problems
 + Why doesn't my List work properly?
-+ Confused about the manner I keep the view model in memory using input/output with transform technique.
++ Confused about the manner I kept the view model in memory using input/output with transform function technique.
 
 ### What next
 + Tests
