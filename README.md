@@ -1,5 +1,8 @@
 # BrazilCovid19Vaccine
 
+<img src="https://github.com/ndrsKloss/BrazilCovid19Vaccine/blob/master/Images/image03.png" width="19%" height="19%"> 
+<img src="https://github.com/ndrsKloss/BrazilCovid19Vaccine/blob/master/Images/image04.png" width="40%" height="40%">
+
 This app shows the current percentage of the vaccination campaign in Brazil and its states. The data is obtained thanks to [covid19br](https://github.com/wcota/covid19br).
 
 The main purpose of this project is to give it a try to widgets, a new iOS 14 feature while using Combine and SwiftUI.
